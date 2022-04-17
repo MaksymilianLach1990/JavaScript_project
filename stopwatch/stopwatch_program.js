@@ -15,6 +15,9 @@ let secs = 0;
 
 startBtn.addEventListener("click", () => {
     if(paused){
+        startBtn.style.borderColor = "black";
+        pauseBtn.style.borderColor = "white"
+        resetBtn.style.borderColor = "white"
         paused = false;
         startTime = Date.now() - elapsedTime;
         intervalId = setInterval(updateTime, 1000);
@@ -22,12 +25,24 @@ startBtn.addEventListener("click", () => {
 });
 pauseBtn.addEventListener("click", () => {
     if(!paused){
+        startBtn.style.borderColor = "white";
+        pauseBtn.style.borderColor = "black";
+        resetBtn.style.borderColor = "white"
+        
         paused = true;
         elapsedTime = Date.now() - startTime;
         clearInterval(intervalId);
     }
 });
 resetBtn.addEventListener("click", () => {
+    startBtn.style.borderColor = "white";
+    pauseBtn.style.borderColor = "white";
+    resetBtn.onmousedown = () => {
+        resetBtn.style.borderColor = "black";
+    }
+    resetBtn.onmouseup = () => {
+        resetBtn.style.borderColor = "white";
+    }
     paused = true;
     clearInterval(intervalId);
     startTime = 0;
