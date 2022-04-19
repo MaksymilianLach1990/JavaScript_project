@@ -66,6 +66,10 @@ function createFood(){
         const randNum = Math.round((Math.random() * (max - min) + min) / unitSize) *unitSize;
         return randNum;
     }
+    function checkFill(){
+        // napisz funkcje sprawdzającą czy w danym pole jest ciało węża
+        // jeśli trafi na węża znajdź inne pole
+    }
 
     foodX = randomFood(0, gameWidth - unitSize);
     foodY = randomFood(0, gameWidth - unitSize);
