@@ -84,3 +84,12 @@ function restartGame(){
     running = true;
     
 }
+
+function printScore(){
+    // napisz funkcje wyświetlającą wynik rozgrywki
+}
+
+function computerPlayer(){
+    // napisz algorytm symulujący drugiego gracza
+    // stwórz przełącznik pozwalający ustawić drugiego gracza jako komputer
+}
