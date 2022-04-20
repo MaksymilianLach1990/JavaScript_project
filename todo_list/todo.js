@@ -1,5 +1,12 @@
 // window.localStorage
 
+// add item in to localStorage(key, value)
+localStorage.setItem('name', 'Bob');
+console.log(localStorage.getItem('name'));
+localStorage.removeItem('name')
+
+// Dodaj zapisywanie listy tasków do localStorage
+// Stwórz algorytm pilnujący kolejność dodanych tasków
 
 window.addEventListener('load', () => {
     const form = document.querySelector("#new-task-form");
