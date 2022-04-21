@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load JSON</title>
+    <link rel="stylesheet" href="load_json.css">
+</head>
+<body>
+    
+    <p>The following table will be filled with AJAX.</p>
+
+    <table id="rankings-table" class="table">
+        <thead>
+            <tr>
+                <th>Ranking</th>
+                <th>Full Name</th>
+                <th>Points</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Dom</td>
+                <td>456</td>
+            </tr>            
+
+        </tbody>
+
+    </table>
+
+    <script src="load_json.js"></script>
+    <!-- <script type="text/javascript">
+        
+    const rankingBody = document.querySelector("#rankings-table > tbody");
+    let load = loadRankings();
+    console.log(load);
+    console.log("Here is function")
+    function loadRankings() {
+        console.log("Beginning function")
+        const request = new XMLHttpRequest();
+
+        request.open("get", "rankings.json");
+        request.onload = () => {
+            try {
+                const json = JSON.parse(request.responseText);
+                populateRanking(json);
+            }catch (e) {
+                console.warn("Could not load rankings! :( " + e);
+
+            }
+        }
+
+        request.send();
+    }
+
+    function populateRanking(json) {
+        console.log(json);
+    }
+    </script> -->
+</body>
+</html>
