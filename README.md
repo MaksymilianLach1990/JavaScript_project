@@ -1,5 +1,6 @@
 # JavaScript_project
 Some simple JavaScript project:
+
   Gry:
   - ping pong
   - rock paper scissors
